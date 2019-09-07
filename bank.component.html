@@ -1,0 +1,37 @@
+<div>
+<table width="100%">
+<h1>Bank search Application</h1>
+    <!-- <form [formGroup]="bankform">
+        <input type="text" formControlName="city" placeholder="select city"><br /> <br> -->
+        <!-- <input type="text"  placeholder="Search for city here"/> -->
+        <select class="text" width="100%">
+            <option value="Bangalore">Bangalore</option>
+            <option value="Thamilnadu">Thamilnadu</option>
+            <option value="Andrapradesh">Andrapradesh</option>
+            <option value="Thelangana">Thelangana</option>
+        </select><br/><br>
+
+
+        <input type="text"   placeholder="Search for the bank here"width="100%">
+        ​
+        <table border="1" width="100%">
+          <tr>
+            <th>Action</th>
+            <th>bank name</th>
+            <th>IFSC</th>
+            <th>Bank ID</th>
+            <th>Branch</th>
+
+          </tr>
+          <tr *ngFor="let customer of users | customerBanknameFilter:bankname;let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{customer.bankname}}</td>
+            <td>{{customer.IFSC}}</td>
+            <td>{{customer.Bankid}}</td>
+            <td>{{customer.Branch}}</td>
+
+          </tr>
+        ​</table>
+<!-- </form> -->
+</table>
+</div>
